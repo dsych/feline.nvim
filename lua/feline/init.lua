@@ -11,6 +11,12 @@ local gen = utils.lazy_require('feline.generator')
 
 local M = {}
 
+-- Deprecation warning for `develop` branch
+vim.notify_once(
+    'The "develop" branch of Feline.nvim has been deprecated and it will be removed soon. ' ..
+    'Please switch to the "master" branch if you wish to continue receiving updates.'
+)
+
 -- Parse configuration option with name config_name from config_dict and match its type
 -- Return a default value (if provided one) in case the configuration option doesn't exist
 local function parse_config(config_dict, defaults)
